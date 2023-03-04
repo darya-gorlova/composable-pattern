@@ -4,31 +4,31 @@
       <p class="title">
         This is a page. You can click on any of three available components:
       </p>
-      <p class="counter">{{ singlton.counter.value + " times clicked" }}</p>
+      <p class="counter">{{ "" + " clicks" }}</p>
     </div>
 
     <div class="page-external-component">
       <external-component></external-component>
     </div>
-    <div class="page-view"><singlton-view></singlton-view></div>
+    <div class="page-view"><View /></div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import SingltonView from "../views/View.vue";
+import View from "../views/View.vue";
 import ExternalComponent from "../components/ExternalComponent.vue";
 import { useSinglton } from "../composables/useSinglton";
 import { useInheritance } from "../composables/useInheritance";
 import { useNewInstance } from "../composables/useNewInstance";
 export default defineComponent({
-  components: { SingltonView, ExternalComponent },
+  components: { View, ExternalComponent },
   setup() {
-    const singlton = useSinglton();
+    // const singlton = useSinglton();
     // const inheritance = useInheritance();
     // const newInstance = useNewInstance();
     return {
-      singlton,
+      // singlton,
       // inheritance,
       // newInstance
     };

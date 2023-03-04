@@ -1,4 +1,4 @@
-<template><p @click="singlton.click()">1 Kid Component</p></template>
+<template><p @click="">{{"First Kid Component: " + "" + " clicks"}}</p></template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useSinglton } from "../composables/useSinglton";
@@ -6,11 +6,11 @@ import { useInheritance } from "../composables/useInheritance";
 import { useNewInstance } from "../composables/useNewInstance";
 export default defineComponent({
   setup() {
-    const singlton = useSinglton();
+    // const singlton = useSinglton();
     // const inheritance = useInheritance();
     // const newInstance = useNewInstance();
     return {
-      singlton,
+      // singlton,
       // inheritance,
       // newInstance,
       

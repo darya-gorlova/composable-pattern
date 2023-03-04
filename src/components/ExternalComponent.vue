@@ -1,6 +1,6 @@
 <template>
   <div class="external-component">
-    <p @click="singlton.click()">External Component</p>
+    <p @click="">{{"External Component: " + "" + " clicks"}}</p>
   </div>
 </template>
 <script lang="ts">
@@ -10,11 +10,11 @@ import { useInheritance } from "../composables/useInheritance";
 import { useNewInstance } from "../composables/useNewInstance";
 export default defineComponent({
   setup() {
-    const singlton = useSinglton();
+    // const singlton = useSinglton();
     // const inheritance = useInheritance();
     // const newInstance = useNewInstance();
     return {
-      singlton,
+      // singlton,
       // inheritance,
       // newInstance,
     };
